@@ -12,3 +12,5 @@ export interface UpdateTaskData {
   // text: string;
   completed: boolean;
 }
+
+export type SortOrder = "asc" | "desc";
