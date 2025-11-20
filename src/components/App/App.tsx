@@ -9,11 +9,25 @@ import TaskForm from "../TaskForm/TaskForm";
 import { getTasks } from "../../services/taskServices";
 import css from "./App.module.css";
 import type { SortOrder } from "../../types/task";
+import useModalConrol from "../hooks/useModalControl";
+
+// function useModalConrol() {
+//   const [isModalOpen, setIsModalOpen] = useState(false);
+//   const openModal = () => setIsModalOpen(true);
+//   const closeModal = () => setIsModalOpen(false);
+
+//   return {
+//     isModalOpen,
+//     openModal,
+//     closeModal,
+//   };
+// }
 
 export default function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  // const openModal = () => setIsModalOpen(true);
+  // const closeModal = () => setIsModalOpen(false);
+  const { isModalOpen, openModal, closeModal } = useModalConrol();
 
   const [search, setSearch] = useState("");
 
